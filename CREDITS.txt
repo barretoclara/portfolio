@@ -1,0 +1,9 @@
+ASSETS CREDITS
+
+ART
+- cat.png -
+Made by Elthen and can be acquired by anyone for use in commercial/non-comercial projects on https://elthen.itch.io/2d-pixel-art-cat-sprites.
+
+SOUND EFFECTS
+- hover.waw -
+the Wooden Click by BenjaminNelan -- https://freesound.org/s/321083/ -- License: Creative Commons 0.

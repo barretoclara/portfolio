@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Clara B | Portfólio</title>
+  <meta name="description" content="Portfólio e currículo de Clara Barreto: escolha um projeto e veja os detalhes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="#sobre" class="topbar__logo">CB</a>
+    <div class="cat-track" aria-hidden="true"><div class="cat"></div></div>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+      <button id="sound-toggle" aria-label="Ligar ou desligar o som" aria-pressed="true">Som: on</button>
+    </nav>
+  </header>
+
+  <!-- tela inicial / sobre -->
+  <section id="sobre" class="intro" aria-label="Apresentação">
+    <div class="intro__inner">
+      <h1 class="intro__title">CLARA BARRETO</h1>
+      <p class="intro__sub">Portfólio</p>
+      <div class="intro__card">
+        <img class="intro__avatar" src="assets/images/avatar.jpg" alt="Foto de Clara Barreto" onerror="this.remove()">
+        <div>
+          <p class="intro__hi">Bem-vindo(a)! Eu sou Clara Barreto.</p>
+          <p class="intro__role">Estudante de Ciência da Computação</p>
+          <p class="intro__bio">
+            Apaixonada por programação, design de interfaces e experiências do usuário,
+            gosto de explorar novas tecnologias, desenvolver soluções criativas e aprender continuamente.
+            
+            Tenho experiência em desenvolvimento web, aplicativos desktop e jogos, com foco em usabilidade, 
+            acessibilidade e performance. Também possuo habilidades em banco de dados e um interesse crescente em cybersegurança e IA!
+          </p>
+        </div>
+      </div>
+      <div class="intro__actions">
+        <a class="btn btn--blink" href="#projetos">Ver projetos</a>
+        <a class="btn btn--ghost" href="assets/cv.pdf" download>Baixar currículo</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- seleção de projetos -->
+    <section id="projetos" class="select">
+      <h2 class="select__title">Escolha seu projeto</h2>
+      <p class="select__hint">Passe o mouse para uma prévia e clique no card para ver todos os detalhes.</p>
+      <div id="filters" class="filters" role="group" aria-label="Filtrar projetos por área" hidden></div>
+      <p id="filter-status" class="filters__status" aria-live="polite"></p>
+      <div id="roster" class="roster"></div>
+    </section>
+  </main>
+
+  <footer id="contato" class="footer">
+    <h2>Vamos conversar?</h2>
+    <p>
+      <a href="https://github.com/barretoclara" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/clara-barreto-922132322/" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+  </footer>
+
+  <!-- janela de detalhes dos projetos (preenchida por js/main.js) -->
+  <dialog id="project-modal" class="modal" aria-labelledby="m-title">
+    <button class="modal__close" id="m-close" aria-label="Fechar detalhes">X</button>
+    <div class="modal__body">
+      <div class="gallery">
+        <div class="gallery__main">
+          <img id="m-img" alt="">
+          <button class="gallery__nav gallery__nav--prev" id="m-prev" aria-label="Imagem anterior">&#9664;</button>
+          <button class="gallery__nav gallery__nav--next" id="m-next" aria-label="Próxima imagem">&#9654;</button>
+        </div>
+        <div class="thumbs" id="m-thumbs"></div>
+      </div>
+      <div class="info">
+        <h3 id="m-title"></h3>
+        <p id="m-desc"></p>
+        <div id="m-tech-wrap"><h4>Tecnologias</h4><ul class="tags" id="m-tech"></ul></div>
+        <div id="m-feat-wrap"><h4>Funcionalidades</h4><ul class="features" id="m-feat"></ul></div>
+        <div id="m-actions" class="info__actions">
+          <a id="m-repo" class="btn" target="_blank" rel="noopener">Abrir projeto</a>
+          <a id="m-link" class="btn" target="_blank" rel="noopener">Ver projeto</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cat.js"></script>
+</body>
+</html>
