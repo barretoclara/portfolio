@@ -52,7 +52,7 @@ const PROJECTS = [
       "Narrativa, tutoriais contextuais e desbloqueio progressivo baseados no padrão Observer",
       "Enciclopédia interativa com a cadeia alimentar e atributos econômicos das culturas"
     ],
-    link: "https://github.com/barretoclara",
+    link: "https://clarabarr.itch.io/pest-journey",
     cover: "assets/images/projects/projeto-2/cover.jpg",
     images: []
   },
